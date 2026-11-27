@@ -1,0 +1,54 @@
+def get_number(message):
+    while True:
+        try:
+            return float(input(message))
+        except ValueError:
+            print("Invalid input! Enter a number.")
+
+print("Simple Calculator")
+
+a = get_number("Enter first number: ")
+b = get_number("Enter second number: ")
+
+print("1. Addition")
+print("2. Subtraction")
+print("3. Multiplication")
+print("4. Division")
+
+choice = input("Enter choice (1-4): ")
+
+if choice == "1":
+    print("Result:", a + b)
+elif choice == "2":
+    print("Result:", a - b)
+elif choice == "3":
+    print("Result:", a * b)
+elif choice == "4":
+    if b != 0:
+        print("Result:", a / b)
+    else:
+        print("Cannot divide by zero")
+else:
+    print("Invalid choice")
+
+hard = input("Do advanced calculation? (yes/no): ")
+
+if hard.lower() == "yes":
+    print("1. Exponentiation")
+    print("2. Modulus")
+    ch = input("Enter choice: ")
+
+    if ch == "1":
+        print("Result:", a ** b)
+    elif ch == "2":
+        if b != 0:
+            print("Result:", a % b)
+        else:
+            print("Cannot divide by zero")
+    else:
+        print("Invalid choice")
+
+
+
+
+

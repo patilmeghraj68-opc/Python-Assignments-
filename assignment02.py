@@ -1,0 +1,19 @@
+EARTH_GRAVITY = 9.81
+MOON_GRAVITY = 1.62
+
+def calculate_weight(mass, gravity):
+    return mass * gravity
+
+mass = float(input("Enter mass in kg: "))
+
+earth_weight = calculate_weight(mass, EARTH_GRAVITY)
+moon_weight = calculate_weight(mass, MOON_GRAVITY)
+
+print("Weight on Earth:", earth_weight, "N")
+print("Weight on Moon:", moon_weight, "N")
+
+print("Constant: EARTH_GRAVITY")
+print("Function: calculate_weight")
+print("Data type of mass:", type(mass))
+print("Parameter: gravity")
+print("Arithmetic operator: *")
